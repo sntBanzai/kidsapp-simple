@@ -26,4 +26,44 @@
         android:text="@string/reply_to_Wroclaw"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
+    <Button
+        android:id="@+id/muckaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="197dp"
+        android:onClick="buttonClicked"
+        android:text="@string/mucka" />
+
+    <Button
+        android:id="@+id/owcaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="335dp"
+        android:onClick="buttonClicked"
+        android:text="@string/sheep" />
+
+    <Button
+        android:id="@+id/swiniaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="178dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:onClick="buttonClicked"
+        android:text="@string/swine" />
+
 </RelativeLayout>

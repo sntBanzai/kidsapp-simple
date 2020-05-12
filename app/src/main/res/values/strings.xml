@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Kidsapp-Simple</string>
     <string name="reply_to_Wroclaw">Good to know that, Wrocław.</string>
+    <string name="mucka">Krowa</string>
+    <string name="sheep">Owca</string>
+    <string name="swine">Swinia</string>
+    <string name="goBackButt">Powróć</string>
 </resources>
