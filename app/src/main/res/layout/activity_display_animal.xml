@@ -21,6 +21,18 @@
         android:onClick="goBack"
         android:text="@string/goBackButt"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="616dp" />
+        tools:layout_editor_absoluteY="603dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="fadeInOrOut"
+        android:text="@string/fadeButt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="603dp" />
 </android.support.constraint.ConstraintLayout>

@@ -5,4 +5,5 @@
     <string name="sheep">Owca</string>
     <string name="swine">Swinia</string>
     <string name="goBackButt">Powróć</string>
+    <string name="fadeButt">Zmień stan</string>
 </resources>
