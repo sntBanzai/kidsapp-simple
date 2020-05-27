@@ -16,19 +16,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonClicked(View view){
-        Intent intent = new Intent(this,DisplayAnimalActivity.class);
+//        Intent intent = new Intent(this,DisplayAnimalActivity.class);
+//        Bundle b = new Bundle();
+//        switch (view.getId()){
+//            case R.id.muckaButton:
+//                b.putInt("imgToShow", R.drawable.mucka);
+//                break;
+//            case R.id.owcaButton:
+//                b.putInt("imgToShow", R.drawable.sheep);
+//                break;
+//            case R.id.swiniaButton:
+//                b.putInt("imgToShow", R.drawable.pig);
+//                break;
+//        }
+//        intent.putExtras(b);
+//        startActivity(intent);
+
+        Intent intent = new Intent(this, GalleryActivity.class);
         Bundle b = new Bundle();
-        switch (view.getId()){
-            case R.id.muckaButton:
-                b.putInt("imgToShow", R.drawable.mucka);
-                break;
-            case R.id.owcaButton:
-                b.putInt("imgToShow", R.drawable.sheep);
-                break;
-            case R.id.swiniaButton:
-                b.putInt("imgToShow", R.drawable.pig);
-                break;
-        }
         intent.putExtras(b);
         startActivity(intent);
 
