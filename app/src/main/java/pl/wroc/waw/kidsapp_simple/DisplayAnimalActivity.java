@@ -11,9 +11,11 @@ import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.TypedValue;
+
+//import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -34,6 +36,9 @@ public class DisplayAnimalActivity extends AppCompatActivity {
         int imgToShow = (int) getIntent().getExtras().get("imgToShow");
         Bitmap btmp = getImageResourceAsBitmap(imgToShow);
         imgView.setImageBitmap(btmp);
+
+
+
     }
 
     public void goBack(View v){
