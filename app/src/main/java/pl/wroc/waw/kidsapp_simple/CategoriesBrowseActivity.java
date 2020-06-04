@@ -1,11 +1,14 @@
 package pl.wroc.waw.kidsapp_simple;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import pl.wroc.waw.kidsapp_simple.recview.CategoriesBrowseRecyclerViewAdapter;
+import pl.wroc.waw.kidsapp_simple.recview.GridAutofitLayoutManager;
 
 public class CategoriesBrowseActivity extends AppCompatActivity {
 
@@ -23,8 +26,9 @@ public class CategoriesBrowseActivity extends AppCompatActivity {
         // in content do not change the layout size of the RecyclerView
         //recyclerView.setHasFixedSize(true);
 
-        // use a linear layout manager
-        layoutManager = new GridLayoutManager(getApplicationContext(), 3);
+
+        layoutManager = new GridAutofitLayoutManager(getApplicationContext(), -1);
+
         recyclerView.setLayoutManager(layoutManager);
 
         // specify an adapter (see also next example)

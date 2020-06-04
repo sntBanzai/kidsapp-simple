@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageButton
-        android:layout_width="64px"
-        android:layout_height="64px"
-        android:id="@+id/category_ico" />
+        android:id="@+id/category_ico"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:adjustViewBounds="true"
+        android:alpha="5"
+        android:background="@android:drawable/menuitem_background"
+        android:cropToPadding="false"
+        android:fadingEdge="horizontal|vertical"
+        android:minWidth="64px"
+        android:minHeight="64px"
+        android:scaleType="fitCenter" />
 
 </FrameLayout>
