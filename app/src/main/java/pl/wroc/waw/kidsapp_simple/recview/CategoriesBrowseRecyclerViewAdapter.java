@@ -17,15 +17,16 @@ public class CategoriesBrowseRecyclerViewAdapter extends RecyclerView.Adapter<Ca
     @Override
     public CategoriesBrowseRecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.category_butt, viewGroup, false);
-
         return new CategoriesBrowseRecyclerViewHolder(inflate);
 
     }
 
     @Override
     public void onBindViewHolder(@NonNull CategoriesBrowseRecyclerViewHolder viewHolder, int i) {
+        Category currCat = Category.values()[i];
         ImageButton imgButt =  viewHolder.getCatView();
-        imgButt.setImageResource(Category.values()[i].getResIconId());
+        imgButt.setTag(currCat);
+        imgButt.setImageResource(currCat.getResIconId());
     }
 
     @Override

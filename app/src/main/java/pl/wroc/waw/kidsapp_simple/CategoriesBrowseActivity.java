@@ -1,11 +1,10 @@
 package pl.wroc.waw.kidsapp_simple;
 
-import android.content.res.Configuration;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import pl.wroc.waw.kidsapp_simple.recview.CategoriesBrowseRecyclerViewAdapter;
 import pl.wroc.waw.kidsapp_simple.recview.GridAutofitLayoutManager;
@@ -34,6 +33,18 @@ public class CategoriesBrowseActivity extends AppCompatActivity {
         // specify an adapter (see also next example)
         mAdapter = new CategoriesBrowseRecyclerViewAdapter();
         recyclerView.setAdapter(mAdapter);
+    }
+
+    public void categoryButtClicked(View view) {
+        Object tag = view.getTag();
+        if(tag instanceof Category){
+            Intent intent = new Intent(this, GalleryActivity.class);
+            Bundle b = new Bundle();
+            b.putString(Category.class.getCanonicalName(), ((Category) tag).name());
+            intent.putExtras(b);
+            startActivity(intent);
+        }
+
     }
 
 }

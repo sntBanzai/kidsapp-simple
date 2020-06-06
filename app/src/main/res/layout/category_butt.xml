@@ -12,8 +12,9 @@
         android:background="@android:drawable/menuitem_background"
         android:cropToPadding="false"
         android:fadingEdge="horizontal|vertical"
-        android:minWidth="64px"
         android:minHeight="64px"
+        android:minWidth="64px"
+        android:onClick="categoryButtClicked"
         android:scaleType="fitCenter" />
 
 </FrameLayout>
