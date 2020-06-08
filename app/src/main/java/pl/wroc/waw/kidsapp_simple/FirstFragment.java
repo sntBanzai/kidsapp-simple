@@ -3,6 +3,7 @@ package pl.wroc.waw.kidsapp_simple;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -48,9 +49,11 @@ public class FirstFragment extends Fragment {
         tvLabel.setText(page + " -- " + title);
         ImageView image = view.findViewById(R.id.imageView3);
         Resources res = getResources();
-        TypedArray images = res.obtainTypedArray(R.array.fruits);
+        TypedArray images = res.obtainTypedArray(R.array.fruits_image);
         Drawable drawable = images.getDrawable(page);
         image.setImageDrawable(drawable);
+
+
         return view;
     }
 }

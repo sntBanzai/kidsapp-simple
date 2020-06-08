@@ -5,9 +5,16 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
+import java.io.IOException;
+
 public class GalleryActivity extends AppCompatActivity {
+
+
+    MediaPlayer mp;
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
         private static int NUM_ITEMS = 3;
@@ -54,6 +61,34 @@ public class GalleryActivity extends AppCompatActivity {
         ViewPager vpPager = (ViewPager) findViewById(R.id.vpPager);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
         vpPager.setAdapter(adapterViewPager);
+
+        vpPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+                if (mp != null) {
+                    mp.stop();
+                    mp.release();
+                    mp = null;
+                }
+                mp = MediaPlayer.create(getApplicationContext(), R.raw.gruszka);
+                mp.start();
+                System.out.println("PageScrolled "+position);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                System.out.println("PageSelectes");
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                System.out.println("pageScrollState");
+            }
+        });
+
+
+
     }
 }
 

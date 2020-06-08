@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="fruits">
+    <array name="fruits_image">
         <item>@drawable/owoc1</item>
         <item>@drawable/owoc2</item>
         <item>@drawable/owoc3</item>
@@ -11,5 +11,8 @@
         <item>@drawable/owoc8</item>
         <item>@drawable/owoc9</item>
         <item>@drawable/owoc10</item>
+    </array>
+    <array name="fruits_voice">
+        <item></item>
     </array>
 </resources>
