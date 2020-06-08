@@ -19,7 +19,7 @@ public class FirstFragment extends Fragment {
     private int page;
 
     public FirstFragment() {
-        // Required empty public constructor
+
     }
 
     public static FirstFragment newInstance(String title, int page) {

@@ -7,44 +7,45 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 import java.io.IOException;
 
+import javax.xml.transform.Result;
+
 public class GalleryActivity extends AppCompatActivity {
 
+    final int[] song = {R.raw.jablko,
+        R.raw.banan,R.raw.malina,R.raw.wisnia, R.raw.ananas, R.raw.gruszka, R.raw.jezyna, R.raw.brzoskwinia, R.raw.kiwi, R.raw.cytryna,R.raw.cytryna
+    ,R.raw.pomarancza, R.raw.sliwka, R.raw.truskawka, R.raw.arbuz};
 
-    MediaPlayer mp;
+    MediaPlayer mp ;
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
-        private static int NUM_ITEMS = 3;
+        private static int ITEMS = 15;
 
         public MyPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
         }
 
-        // Returns total number of pages
+
         @Override
         public int getCount() {
-            return NUM_ITEMS;
+            return ITEMS;
         }
 
-        // Returns the fragment to display for that page
+
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0: // Fragment # 0 - This will show FirstFragment
-                    return FirstFragment.newInstance( "Page # 1",0);
-                case 1: // Fragment # 0 - This will show FirstFragment different title
-                    return FirstFragment.newInstance("Page # 2", 1);
-                case 2: // Fragment # 1 - This will show SecondFragment
-                    return SecondFragment.newInstance( "Page # 3",2);
-                default:
-                    return null;
-            }
+
+
+                    return FirstFragment.newInstance( "",position);
+
+
         }
 
-        // Returns the page title for the top indicator
+
         @Override
         public CharSequence getPageTitle(int position) {
             return "Page " + position;
@@ -71,9 +72,8 @@ public class GalleryActivity extends AppCompatActivity {
                     mp.release();
                     mp = null;
                 }
-                mp = MediaPlayer.create(getApplicationContext(), R.raw.gruszka);
-                mp.start();
-                System.out.println("PageScrolled "+position);
+                mp = MediaPlayer.create(getApplicationContext(), song[position]);
+                    mp.start();
             }
 
             @Override
