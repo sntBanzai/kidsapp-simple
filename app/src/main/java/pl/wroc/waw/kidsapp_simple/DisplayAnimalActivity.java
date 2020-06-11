@@ -1,10 +1,7 @@
 package pl.wroc.waw.kidsapp_simple;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
@@ -12,16 +9,13 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-
-//import android.support.v7.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import java.io.IOException;
-import java.io.InputStream;
+import androidx.appcompat.app.AppCompatActivity;
+
+//import android.support.v7.app.AppCompatActivity;
 
 public class DisplayAnimalActivity extends AppCompatActivity {
 

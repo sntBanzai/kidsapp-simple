@@ -4,12 +4,13 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 
 public class FirstFragment extends Fragment {
@@ -18,7 +19,7 @@ public class FirstFragment extends Fragment {
     private int page;
 
     public FirstFragment() {
-        // Required empty public constructor
+
     }
 
     public static FirstFragment newInstance(String title, int page) {
@@ -48,9 +49,11 @@ public class FirstFragment extends Fragment {
         tvLabel.setText(page + " -- " + title);
         ImageView image = view.findViewById(R.id.imageView3);
         Resources res = getResources();
-        TypedArray images = res.obtainTypedArray(R.array.fruits);
+        TypedArray images = res.obtainTypedArray(R.array.fruits_image);
         Drawable drawable = images.getDrawable(page);
         image.setImageDrawable(drawable);
+
+
         return view;
     }
 }

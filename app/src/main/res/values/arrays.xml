@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="fruits">
-        <item>@drawable/owoc1</item>
-        <item>@drawable/owoc2</item>
-        <item>@drawable/owoc3</item>
-        <item>@drawable/owoc4</item>
-        <item>@drawable/owoc5</item>
-        <item>@drawable/owoc6</item>
-        <item>@drawable/owoc7</item>
-        <item>@drawable/owoc8</item>
-        <item>@drawable/owoc9</item>
-        <item>@drawable/owoc10</item>
+    <array name="fruits_image">
+        <item>@drawable/fruit1</item>
+        <item>@drawable/fruit2</item>
+        <item>@drawable/fruit3</item>
+        <item>@drawable/fruit4</item>
+        <item>@drawable/fruit5</item>
+        <item>@drawable/fruit6</item>
+        <item>@drawable/fruit7</item>
+        <item>@drawable/fruit8</item>
+        <item>@drawable/fruit9</item>
+        <item>@drawable/fruit10</item>
+        <item>@drawable/fruit11</item>
+        <item>@drawable/fruit12</item>
+        <item>@drawable/fruit13</item>
+        <item>@drawable/fruit14</item>
+        <item>@drawable/fruit15</item>
+
+
+    </array>
+    <array name="fruits_voice">
+        <item></item>
     </array>
 </resources>
