@@ -3,6 +3,8 @@ package pl.wroc.waw.kidsapp_simple;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +22,7 @@ public class CategoriesBrowseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories_browse);
         recyclerView = findViewById(R.id.CategoriesRecyclerView);
-
+        //recyclerView.requestDisallowInterceptTouchEvent(true);
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         //recyclerView.setHasFixedSize(true);
@@ -29,6 +31,12 @@ public class CategoriesBrowseActivity extends AppCompatActivity {
         layoutManager = new GridAutofitLayoutManager(getApplicationContext(), -1);
 
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println();
+            }
+        });
 
         // specify an adapter (see also next example)
         mAdapter = new CategoriesBrowseRecyclerViewAdapter();
@@ -36,6 +44,13 @@ public class CategoriesBrowseActivity extends AppCompatActivity {
     }
 
     public void categoryButtClicked(View view) {
+        View parv = (View) view.getParent();
+        ScaleAnimation anim = new ScaleAnimation(1f, 0.95f, 1f, 0.95f);
+        anim.setDuration(2);
+        anim.setZAdjustment(Animation.ZORDER_BOTTOM);
+        anim.setFillBefore(true);
+        parv.startAnimation(anim);
+
         Object tag = view.getTag();
         if(tag instanceof Category){
             Intent intent = new Intent(this, GalleryActivity.class);
