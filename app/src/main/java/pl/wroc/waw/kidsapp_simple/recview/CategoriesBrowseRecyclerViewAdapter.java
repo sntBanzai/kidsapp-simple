@@ -8,7 +8,7 @@ import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import pl.wroc.waw.kidsapp_simple.Category;
+import pl.wroc.waw.kidsapp_simple.model.Category;
 import pl.wroc.waw.kidsapp_simple.R;
 
 public class CategoriesBrowseRecyclerViewAdapter extends RecyclerView.Adapter<CategoriesBrowseRecyclerViewHolder> {
@@ -26,7 +26,7 @@ public class CategoriesBrowseRecyclerViewAdapter extends RecyclerView.Adapter<Ca
         Category currCat = Category.values()[i];
         ImageButton imgButt =  viewHolder.getCatView();
         imgButt.setTag(currCat);
-        imgButt.setImageResource(currCat.getResIconId());
+        imgButt.setImageResource (currCat.getResIconId());
     }
 
     @Override

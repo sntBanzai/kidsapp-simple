@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import pl.wroc.waw.kidsapp_simple.model.Category;
 import pl.wroc.waw.kidsapp_simple.recview.CategoriesBrowseRecyclerViewAdapter;
 import pl.wroc.waw.kidsapp_simple.recview.GridAutofitLayoutManager;
 
@@ -40,6 +42,7 @@ public class CategoriesBrowseActivity extends AppCompatActivity {
         if(tag instanceof Category){
             Intent intent = new Intent(this, GalleryActivity.class);
             Bundle b = new Bundle();
+
             b.putString(Category.class.getCanonicalName(), ((Category) tag).name());
             intent.putExtras(b);
             startActivity(intent);

@@ -19,7 +19,21 @@
 
 
     </array>
-    <array name="fruits_voice">
-        <item></item>
-    </array>
+    <string-array name="fruit_strings">
+        <item>Jabłko</item>
+        <item>Banan</item>
+        <item>Malina</item>
+        <item>Wiśnia</item>
+        <item>Ananas</item>
+        <item>Gruszka</item>
+        <item>Jeżyna</item>
+        <item>Brzoskwinia</item>
+        <item>Kiwi</item>
+        <item>Cytryna</item>
+        <item>Cytryna</item>
+        <item>Pomarańcza</item>
+        <item>Śliwka</item>
+        <item>Truskawka</item>
+        <item>Arbuz</item>
+    </string-array>
 </resources>

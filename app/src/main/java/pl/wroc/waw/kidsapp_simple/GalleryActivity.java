@@ -9,6 +9,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import pl.wroc.waw.kidsapp_simple.categoryFactory.CategoryManufacture;
+import pl.wroc.waw.kidsapp_simple.categoryFactory.Manufacture;
+import pl.wroc.waw.kidsapp_simple.model.Category;
+import pl.wroc.waw.kidsapp_simple.model.OneCategory;
+
 public class GalleryActivity extends AppCompatActivity {
 
     final int[] song = {R.raw.jablko,
@@ -58,6 +63,9 @@ public class GalleryActivity extends AppCompatActivity {
 		String categoryName = (String) getIntent().getExtras().get(Category.class.getCanonicalName());
         Category passedCategory = Category.valueOf(categoryName);
 
+        Manufacture manufacture = new CategoryManufacture();
+        final OneCategory category = manufacture.manufactureCategory(getApplicationContext());
+
         ViewPager vpPager = (ViewPager) findViewById(R.id.vpPager);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
         vpPager.setAdapter(adapterViewPager);
@@ -71,7 +79,7 @@ public class GalleryActivity extends AppCompatActivity {
                     mp.release();
                     mp = null;
                 }
-                mp = MediaPlayer.create(getApplicationContext(), song[position]);
+                mp = MediaPlayer.create(getApplicationContext(), category.getSound(position));
                     mp.start();
             }
 
@@ -82,7 +90,6 @@ public class GalleryActivity extends AppCompatActivity {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                System.out.println("pageScrollState");
             }
         });
 

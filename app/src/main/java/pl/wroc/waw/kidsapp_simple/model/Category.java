@@ -1,4 +1,4 @@
-package pl.wroc.waw.kidsapp_simple;
+package pl.wroc.waw.kidsapp_simple.model;
 
 import static pl.wroc.waw.kidsapp_simple.R.drawable.icon_category_african_animals;
 import static pl.wroc.waw.kidsapp_simple.R.drawable.icon_category_animal_cubs;
@@ -54,6 +54,7 @@ public enum Category {
     BODY_PARTS(icon_category_body_parts),
     CLOTHES(icon_category_clothes),
     FIREMEN(icon_category_firemen);
+
 
     private final int resIconId;
 
