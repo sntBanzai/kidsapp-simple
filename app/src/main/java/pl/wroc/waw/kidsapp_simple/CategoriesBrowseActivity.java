@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import pl.wroc.waw.kidsapp_simple.categoryFactory.Manufacture;
 import pl.wroc.waw.kidsapp_simple.model.Category;
 import pl.wroc.waw.kidsapp_simple.recview.CategoriesBrowseRecyclerViewAdapter;
 import pl.wroc.waw.kidsapp_simple.recview.GridAutofitLayoutManager;
@@ -19,6 +20,7 @@ public class CategoriesBrowseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Manufacture.initCategoryMap(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories_browse);
         recyclerView = findViewById(R.id.CategoriesRecyclerView);

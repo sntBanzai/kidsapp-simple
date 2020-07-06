@@ -63,8 +63,7 @@ public class GalleryActivity extends AppCompatActivity {
 		String categoryName = (String) getIntent().getExtras().get(Category.class.getCanonicalName());
         Category passedCategory = Category.valueOf(categoryName);
 
-        Manufacture manufacture = new CategoryManufacture();
-        final OneCategory category = manufacture.manufactureCategory(getApplicationContext());
+        final OneCategory category = Manufacture.getCategory(passedCategory);
 
         ViewPager vpPager = (ViewPager) findViewById(R.id.vpPager);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
