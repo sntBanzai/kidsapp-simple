@@ -14,7 +14,7 @@ public class GalleryActivity extends AppCompatActivity {
     final int[] song = {R.raw.jablko,
         R.raw.banan,R.raw.malina,R.raw.wisnia, R.raw.ananas, R.raw.gruszka, R.raw.jezyna, R.raw.brzoskwinia, R.raw.kiwi, R.raw.cytryna,R.raw.cytryna
     ,R.raw.pomarancza, R.raw.sliwka, R.raw.truskawka, R.raw.arbuz};
-
+//test
     MediaPlayer mp ;
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
