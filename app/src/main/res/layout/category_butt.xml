@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <ImageButton
@@ -9,12 +9,16 @@
         android:layout_height="128dp"
         android:adjustViewBounds="true"
         android:alpha="5"
-        android:background="@android:drawable/menuitem_background"
-        android:cropToPadding="false"
+        android:background="@android:drawable/gallery_thumb"
+        android:clickable="true"
+        android:cropToPadding="true"
         android:fadingEdge="horizontal|vertical"
+        android:hapticFeedbackEnabled="true"
         android:minHeight="64px"
         android:minWidth="64px"
         android:onClick="categoryButtClicked"
-        android:scaleType="fitCenter" />
+        android:padding="12dp"
+        android:scaleType="centerCrop"
+        android:soundEffectsEnabled="true" />
 
 </FrameLayout>
