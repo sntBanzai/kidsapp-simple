@@ -2,11 +2,16 @@ package pl.wroc.waw.kidsapp_simple.model;
 
 import pl.wroc.waw.kidsapp_simple.R;
 
-public class KitchenCategory extends  OneCategory {
+public class InsectsCategoryImpl extends CategoryImpl {
+
+    public InsectsCategoryImpl() {
+        super(Category.INSECTS);
+    }
+
     @Override
     public void initIds() {
         idName = R.string.fruitCategory;
-        idIcon = R.drawable.icon_category_kitchen;
+        idIcon = R.drawable.icon_category_insects;
 
         idSounds = new int[]{R.raw.jablko,
                 R.raw.banan, R.raw.malina, R.raw.wisnia, R.raw.ananas, R.raw.gruszka, R.raw.jezyna, R.raw.brzoskwinia, R.raw.kiwi, R.raw.cytryna, R.raw.cytryna

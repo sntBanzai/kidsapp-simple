@@ -1,37 +1,5 @@
 package pl.wroc.waw.kidsapp_simple.categoryFactory;
 
-import android.content.Context;
-import android.content.res.TypedArray;
-
-import pl.wroc.waw.kidsapp_simple.R;
-import pl.wroc.waw.kidsapp_simple.model.AfricanAnimals;
-import pl.wroc.waw.kidsapp_simple.model.AnimalCubsCategory;
-import pl.wroc.waw.kidsapp_simple.model.BathroomCategory;
-import pl.wroc.waw.kidsapp_simple.model.BodyPartsCategory;
-import pl.wroc.waw.kidsapp_simple.model.Category;
-import pl.wroc.waw.kidsapp_simple.model.ChristmasCategory;
-import pl.wroc.waw.kidsapp_simple.model.ClothesCategory;
-import pl.wroc.waw.kidsapp_simple.model.ConstructionMachinery;
-import pl.wroc.waw.kidsapp_simple.model.EasterCategory;
-import pl.wroc.waw.kidsapp_simple.model.FiremenCategory;
-import pl.wroc.waw.kidsapp_simple.model.FlowersCategory;
-import pl.wroc.waw.kidsapp_simple.model.ForestAnimalsCategory;
-import pl.wroc.waw.kidsapp_simple.model.FruitCategory;
-import pl.wroc.waw.kidsapp_simple.model.InsectsCategory;
-import pl.wroc.waw.kidsapp_simple.model.KitchenCategory;
-import pl.wroc.waw.kidsapp_simple.model.MusicalInstrumentsCategory;
-import pl.wroc.waw.kidsapp_simple.model.OneCategory;
-import pl.wroc.waw.kidsapp_simple.model.PetsCategory;
-import pl.wroc.waw.kidsapp_simple.model.ProfessionsCategory;
-import pl.wroc.waw.kidsapp_simple.model.RoomCategory;
-import pl.wroc.waw.kidsapp_simple.model.SeaAnimals;
-import pl.wroc.waw.kidsapp_simple.model.SeaCategory;
-import pl.wroc.waw.kidsapp_simple.model.ShapesCategory;
-import pl.wroc.waw.kidsapp_simple.model.ToolsCategory;
-import pl.wroc.waw.kidsapp_simple.model.ToysCategory;
-import pl.wroc.waw.kidsapp_simple.model.VegetablesCategory;
-import pl.wroc.waw.kidsapp_simple.model.VehiclesCategory;
-
 public class CategoryManufacture extends Manufacture {
 
 //

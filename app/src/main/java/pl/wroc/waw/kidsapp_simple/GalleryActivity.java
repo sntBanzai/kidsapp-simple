@@ -9,10 +9,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import pl.wroc.waw.kidsapp_simple.categoryFactory.CategoryManufacture;
 import pl.wroc.waw.kidsapp_simple.categoryFactory.Manufacture;
 import pl.wroc.waw.kidsapp_simple.model.Category;
-import pl.wroc.waw.kidsapp_simple.model.OneCategory;
+import pl.wroc.waw.kidsapp_simple.model.CategoryImpl;
 
 public class GalleryActivity extends AppCompatActivity {
 
@@ -63,7 +62,7 @@ public class GalleryActivity extends AppCompatActivity {
 		String categoryName = (String) getIntent().getExtras().get(Category.class.getCanonicalName());
         Category passedCategory = Category.valueOf(categoryName);
 
-        final OneCategory category = Manufacture.getCategory(passedCategory);
+        final CategoryImpl category = Manufacture.getCategory(passedCategory);
 
         ViewPager vpPager = (ViewPager) findViewById(R.id.vpPager);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());

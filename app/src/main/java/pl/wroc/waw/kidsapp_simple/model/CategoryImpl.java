@@ -1,9 +1,12 @@
 package pl.wroc.waw.kidsapp_simple.model;
 
+import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 
-public abstract class OneCategory {
+public abstract class CategoryImpl {
+
+    private final Category category;
 
     protected int idName;
     protected int idIcon;
@@ -11,13 +14,10 @@ public abstract class OneCategory {
     protected int idImages;
     protected int idNames;
 
-
-    private String name;
-    private Drawable icon;
-
-    private int[] sounds;
-    private TypedArray images;
-    private String[] names;
+    public CategoryImpl(Category cat){
+        this.category = cat;
+        initIds();
+    }
 
     abstract public void initIds();
 
@@ -42,34 +42,28 @@ public abstract class OneCategory {
         return idNames;
     }
 
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setIcon(Drawable icon) {
-        this.icon = icon;
-    }
-
-    public void setSounds(int[] sounds) {
-        this.sounds = sounds;
-    }
-
-    public void setImages(TypedArray images) {
-        this.images = images;
-    }
-
-    public void setNames(String[] names) {
-        this.names = names;
-    }
-
     public int[] getSounds() {
-        return sounds;
+        return getIdSounds();
     }
 
     public int getSound(int index){
-        return  sounds[index];
+        return  getSounds()[index];
+    }
+
+    public TypedArray getImages(Context ctx){
+        return ctx.getResources().obtainTypedArray(getIdImages());
+    }
+
+    public Drawable getIcon(Context ctx){
+        return ctx.getResources().getDrawable(getIdIcon());
+    }
+
+    public String[] getNames(Context ctx){
+        return ctx.getResources().getStringArray(getIdNames());
+    }
+
+    public String getName(Context ctx){
+        return ctx.getResources().getString(getIdName());
     }
 
     //Resources res = getResources();

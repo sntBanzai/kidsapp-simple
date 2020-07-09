@@ -20,7 +20,6 @@ public class CategoriesBrowseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Manufacture.initCategoryMap(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories_browse);
         recyclerView = findViewById(R.id.CategoriesRecyclerView);

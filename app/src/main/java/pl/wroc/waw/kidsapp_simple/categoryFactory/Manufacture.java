@@ -1,200 +1,113 @@
 package pl.wroc.waw.kidsapp_simple.categoryFactory;
 
-import android.content.Context;
-
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import pl.wroc.waw.kidsapp_simple.model.AfricanAnimals;
-import pl.wroc.waw.kidsapp_simple.model.AnimalCubsCategory;
-import pl.wroc.waw.kidsapp_simple.model.BathroomCategory;
-import pl.wroc.waw.kidsapp_simple.model.BodyPartsCategory;
+import pl.wroc.waw.kidsapp_simple.model.AfricanAnimalsCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.AnimalCubsCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.AnimalHouseholdsCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.BathroomCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.BodyPartsCategoryImpl;
 import pl.wroc.waw.kidsapp_simple.model.Category;
-import pl.wroc.waw.kidsapp_simple.model.ChristmasCategory;
-import pl.wroc.waw.kidsapp_simple.model.ClothesCategory;
-import pl.wroc.waw.kidsapp_simple.model.ConstructionMachinery;
-import pl.wroc.waw.kidsapp_simple.model.EasterCategory;
-import pl.wroc.waw.kidsapp_simple.model.FiremenCategory;
-import pl.wroc.waw.kidsapp_simple.model.FlowersCategory;
-import pl.wroc.waw.kidsapp_simple.model.ForestAnimalsCategory;
-import pl.wroc.waw.kidsapp_simple.model.FruitCategory;
-import pl.wroc.waw.kidsapp_simple.model.InsectsCategory;
-import pl.wroc.waw.kidsapp_simple.model.KitchenCategory;
-import pl.wroc.waw.kidsapp_simple.model.MusicalInstrumentsCategory;
-import pl.wroc.waw.kidsapp_simple.model.OneCategory;
-import pl.wroc.waw.kidsapp_simple.model.PetsCategory;
-import pl.wroc.waw.kidsapp_simple.model.ProfessionsCategory;
-import pl.wroc.waw.kidsapp_simple.model.RoomCategory;
-import pl.wroc.waw.kidsapp_simple.model.SeaAnimals;
-import pl.wroc.waw.kidsapp_simple.model.SeaCategory;
-import pl.wroc.waw.kidsapp_simple.model.ShapesCategory;
-import pl.wroc.waw.kidsapp_simple.model.ToolsCategory;
-import pl.wroc.waw.kidsapp_simple.model.ToysCategory;
-import pl.wroc.waw.kidsapp_simple.model.VegetablesCategory;
-import pl.wroc.waw.kidsapp_simple.model.VehiclesCategory;
+import pl.wroc.waw.kidsapp_simple.model.ChristmasCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.ClothesCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.ConstructionMachineryCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.EasterCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.FiremenCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.FlowersCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.ForestAnimalsCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.FruitCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.InsectsCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.KitchenCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.MusicalInstrumentsCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.CategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.PetsCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.ProfessionsCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.RoomCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.SeaAnimalsCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.SeaCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.ShapesCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.ToolsCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.ToysCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.VegetablesCategoryImpl;
+import pl.wroc.waw.kidsapp_simple.model.VehiclesCategoryImpl;
 
 public class Manufacture {
 
-    private static Context contextApp;
-    public static Map<Category, OneCategory> categoryMap;
+    private static final Map<Category, CategoryImpl> categoryMap = initCategoryMap();
 
-    public static void initCategoryMap(Context context) {
-
-        contextApp = context;
-        categoryMap = new HashMap<>();
-        categoryMap.put(Category.AFRICAN_ANIMALS, createCategory(Category.AFRICAN_ANIMALS));
-        categoryMap.put(Category.ANIMAL_CUBS, createCategory(Category.ANIMAL_CUBS));
-        categoryMap.put(Category.BATHROOM, createCategory(Category.BATHROOM));
-        categoryMap.put(Category.BODY_PARTS, createCategory(Category.BODY_PARTS));
-        categoryMap.put(Category.CHRISTMAS, createCategory(Category.CHRISTMAS));
-        categoryMap.put(Category.CLOTHES, createCategory(Category.CLOTHES));
-        categoryMap.put(Category.CONSTRUCTION_MACHINERY, createCategory(Category.CONSTRUCTION_MACHINERY));
-        categoryMap.put(Category.EASTER, createCategory(Category.EASTER));
-        categoryMap.put(Category.FIREMEN, createCategory(Category.FIREMEN));
-        categoryMap.put(Category.FLOWERS, createCategory(Category.FLOWERS));
-        categoryMap.put(Category.FOREST_ANIMALS, createCategory(Category.FOREST_ANIMALS));
-        categoryMap.put(Category.FRUITS, createCategory(Category.FRUITS));
-        categoryMap.put(Category.INSECTS, createCategory(Category.INSECTS));
-        categoryMap.put(Category.KITCHEN, createCategory(Category.KITCHEN));
-        categoryMap.put(Category.MUSICAL_INSTRUMENTS, createCategory(Category.MUSICAL_INSTRUMENTS));
-        categoryMap.put(Category.PETS, createCategory(Category.PETS));
-        categoryMap.put(Category.PROFESSIONS, createCategory(Category.PROFESSIONS));
-        categoryMap.put(Category.ROOM, createCategory(Category.ROOM));
-        categoryMap.put(Category.SEA_ANIMALS, createCategory(Category.SEA_ANIMALS));
-        categoryMap.put(Category.SEA, createCategory(Category.SEA));
-        categoryMap.put(Category.SHAPES, createCategory(Category.SHAPES));
-        categoryMap.put(Category.TOOLS, createCategory(Category.TOOLS));
-        categoryMap.put(Category.TOYS, createCategory(Category.TOYS));
-        categoryMap.put(Category.VEGETABLES, createCategory(Category.VEGETABLES));
-        categoryMap.put(Category.VEHICLES, createCategory(Category.VEHICLES));
-
+    public static Map<Category, CategoryImpl> initCategoryMap() {
+        Map<Category, CategoryImpl> categoryMap = new HashMap<>();
+        for(Category cat : Category.values()){
+            categoryMap.put(cat, createCategoryImpl(cat));
+        }
+        return Collections.unmodifiableMap(categoryMap);
     }
 
-    private static OneCategory createCategory(Category category) {
-        OneCategory iCategory = null;
+    private static CategoryImpl createCategoryImpl(Category category) {
 
         switch (category) {
 
             case AFRICAN_ANIMALS:
-                iCategory = new AfricanAnimals();
-                break;
+                return new AfricanAnimalsCategoryImpl();
             case ANIMAL_CUBS:
-                iCategory = new AnimalCubsCategory();
-                break;
+                return new AnimalCubsCategoryImpl();
             case BATHROOM:
-                iCategory = new BathroomCategory();
-                break;
+                return new BathroomCategoryImpl();
             case BODY_PARTS:
-                iCategory = new BodyPartsCategory();
-                break;
+                return new BodyPartsCategoryImpl();
             case CHRISTMAS:
-                iCategory = new ChristmasCategory();
-                break;
+                return new ChristmasCategoryImpl();
             case CLOTHES:
-                iCategory = new ClothesCategory();
-                break;
+                return new ClothesCategoryImpl();
             case CONSTRUCTION_MACHINERY:
-                iCategory = new ConstructionMachinery();
-                break;
+                return new ConstructionMachineryCategoryImpl();
             case EASTER:
-                iCategory = new EasterCategory();
-                break;
+                return new EasterCategoryImpl();
             case FIREMEN:
-                iCategory = new FiremenCategory();
-                break;
+                return new FiremenCategoryImpl();
             case FLOWERS:
-                iCategory = new FlowersCategory();
-                break;
+                return new FlowersCategoryImpl();
             case FOREST_ANIMALS:
-                iCategory = new ForestAnimalsCategory();
-                break;
+                return new ForestAnimalsCategoryImpl();
             case FRUITS:
-                iCategory = new FruitCategory();
-                break;
+                return new FruitCategoryImpl();
             case INSECTS:
-                iCategory = new InsectsCategory();
-                break;
+                return new InsectsCategoryImpl();
             case KITCHEN:
-                iCategory = new KitchenCategory();
-                break;
+                return new KitchenCategoryImpl();
             case MUSICAL_INSTRUMENTS:
-                iCategory = new MusicalInstrumentsCategory();
-                break;
+                return new MusicalInstrumentsCategoryImpl();
             case PETS:
-                iCategory = new PetsCategory();
-                break;
+                return new PetsCategoryImpl();
             case PROFESSIONS:
-                iCategory = new ProfessionsCategory();
-                break;
+                return new ProfessionsCategoryImpl();
             case ROOM:
-                iCategory = new RoomCategory();
-                break;
+                return new RoomCategoryImpl();
             case SEA_ANIMALS:
-                iCategory = new SeaAnimals();
-                break;
+                return new SeaAnimalsCategoryImpl();
             case SEA:
-                iCategory = new SeaCategory();
-                break;
+                return new SeaCategoryImpl();
             case SHAPES:
-                iCategory = new ShapesCategory();
-                break;
+                return new ShapesCategoryImpl();
             case TOOLS:
-                iCategory = new ToolsCategory();
-                break;
+                return new ToolsCategoryImpl();
             case TOYS:
-                iCategory = new ToysCategory();
-                break;
+                return new ToysCategoryImpl();
             case VEGETABLES:
-                iCategory = new VegetablesCategory();
-                break;
+                return new VegetablesCategoryImpl();
             case VEHICLES:
-                iCategory = new VehiclesCategory();
-                break;
-
-
+                return new VehiclesCategoryImpl();
+            case ANIMAL_HOUSEHOLDS:
+                return new AnimalHouseholdsCategoryImpl();
         }
 
-        iCategory.initIds();
-
-        createName(iCategory);
-
-        createIcon(iCategory);
-
-        createImages(iCategory);
-
-        createNames(iCategory);
-
-        createSounds(iCategory);
-
-
-        return iCategory;
+        return null;
     }
 
-    private static void createName(OneCategory category) {
-        category.setName(contextApp.getResources().getString(category.getIdName()));
-    }
-
-    private static void createIcon(OneCategory category) {
-        category.setIcon(contextApp.getResources().getDrawable(category.getIdIcon()));//
-    }
-
-    private static void createNames(OneCategory category) {
-        category.setNames(contextApp.getResources().getStringArray(category.getIdNames()));
-    }
-
-    private static void createImages(OneCategory category) {
-        category.setImages(contextApp.getResources().obtainTypedArray(category.getIdImages()));
-    }
-
-    private static void createSounds(OneCategory category) {
-        category.setSounds(category.getIdSounds());
-    }
-
-    public static OneCategory getCategory(Category category){
-        if(categoryMap!=null && !categoryMap.isEmpty()){
-            return categoryMap.get(category);
-        }
-        return  null;
+    public static CategoryImpl getCategory(Category category){
+        return  categoryMap.get(category);
     }
 
 

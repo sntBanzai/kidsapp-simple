@@ -2,7 +2,12 @@ package pl.wroc.waw.kidsapp_simple.model;
 
 import pl.wroc.waw.kidsapp_simple.R;
 
-public class ClothesCategory extends  OneCategory {
+public class ClothesCategoryImpl extends CategoryImpl {
+
+    public ClothesCategoryImpl() {
+        super(Category.CLOTHES);
+    }
+
     @Override
     public void initIds() {
         idName = R.string.fruitCategory;
