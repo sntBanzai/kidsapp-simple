@@ -52,7 +52,7 @@ public class CategoriesBrowseActivity extends AppCompatActivity {
         anim.setDuration(2);
         anim.setZAdjustment(Animation.ZORDER_BOTTOM);
         anim.setFillBefore(true);
-        parv.startAnimation(anim);
+        //parv.startAnimation(anim);
 
         Object tag = view.getTag();
         if(tag instanceof Category){
