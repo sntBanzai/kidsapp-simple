@@ -7,18 +7,29 @@
         android:id="@+id/category_ico"
         android:layout_width="128dp"
         android:layout_height="128dp"
-        android:adjustViewBounds="true"
+        android:minWidth="64px"
+        android:minHeight="64px"
+        android:elevation="10dp"
+        android:translationZ="10dp"
+
+
+
+
+        />
+
+    <!-- android:adjustViewBounds="true"
         android:alpha="5"
+         android:background="@android:drawable/gallery_thumb"
+          android:elevation="10dp"
+          android:translationZ="10dp"
         android:background="@android:drawable/gallery_thumb"
         android:clickable="true"
-        android:cropToPadding="true"
+
         android:fadingEdge="horizontal|vertical"
         android:hapticFeedbackEnabled="true"
-        android:minHeight="64px"
-        android:minWidth="64px"
-        android:onClick="categoryButtClicked"
-        android:padding="12dp"
-        android:scaleType="centerCrop"
-        android:soundEffectsEnabled="true" />
 
-</FrameLayout>
+        android:onClick="categoryButtClicked"
+        android:scaleType="centerCrop"
+        android:soundEffectsEnabled="true" /> -->
+
+    </FrameLayout>
