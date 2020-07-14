@@ -2,11 +2,11 @@ package pl.wroc.waw.kidsapp_simple.model;
 
 import pl.wroc.waw.kidsapp_simple.R;
 
-public class FruitCategoryImpl extends CategoryImpl {
+    public class FruitCategoryImpl extends CategoryImpl {
 
-    public FruitCategoryImpl() {
-        super(Category.FRUITS);
-    }
+        public FruitCategoryImpl() {
+            super(Category.FRUITS);
+        }
 
     @Override
     public void initIds() {

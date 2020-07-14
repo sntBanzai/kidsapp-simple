@@ -26,7 +26,7 @@ public class CategoriesBrowseRecyclerViewAdapter extends RecyclerView.Adapter<Ca
     @Override
     public void onBindViewHolder(@NonNull CategoriesBrowseRecyclerViewHolder viewHolder, int i) {
         Category currCat = Category.values()[i];
-        ImageButton imgButt =  viewHolder.getCatView();
+        ImageButton imgButt =  viewHolder.getImageButtonView();
         imgButt.setTag(currCat);
         imgButt.setImageResource (Manufacture.getCategory(currCat).getIdIcon());
     }
